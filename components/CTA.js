@@ -22,7 +22,7 @@ const CTA = () => {
           </p>
 
           <button className="btn btn-primary btn-wide">
-            Get {config.appName}
+            Work with {config.appName}
           </button>
         </div>
       </div>

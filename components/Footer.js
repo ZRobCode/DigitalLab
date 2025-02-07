@@ -36,14 +36,15 @@ const Footer = () => {
             <p className="mt-3 text-sm text-base-content/60">
               Copyright © {new Date().getFullYear()} - All rights reserved
             </p>
-            <a
+             
+              <a
               href="https://shipfa.st/?ref=shipfast_badge"
               title="Go to ShipFast"
               target="_blank"
               className="mt-4 inline-block cursor-pointer rounded bg-neutral px-2 py-1 text-sm text-neutral-content ring-1 ring-base-content/10 duration-200 hover:ring-neutral"
             >
               <div className="flex items-center gap-1">
-                <span className="opacity-90">Built with</span>
+                <span className="opacity-90">Built by</span>
                 <span className="flex items-center gap-0.5 font-semibold tracking-tight">
                   <svg
                     className="size-5"
@@ -58,7 +59,7 @@ const Footer = () => {
                       strokeWidth="20"
                     />
                   </svg>
-                  ShipFast
+                  Digital Lab
                 </span>
               </div>
             </a>

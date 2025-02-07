@@ -1,6 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+const ButtonPortfolio = ({ text = "Portfolio", extraStyle }) => {
+  const handleClick = () => {
+    const portfolioSection = document.getElementById("portfolio");
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <button
+      className={`bg-cyan-600 text-white px-6 py-3 font-semibold rounded-lg shadow-md hover:bg-purple-700 transition ${extraStyle ? extraStyle : ""}`}
+      onClick={handleClick}
+    >
+      {text}
+    </button>
+  );
+};
+
+export default ButtonPortfolio;
+
+/*
+
 import { useSession, signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -9,7 +31,7 @@ import config from "@/config";
 // A simple button to sign in with our providers (Google & Magic Links).
 // It automatically redirects user to callbackUrl (config.auth.callbackUrl) after login, which is normally a private page for users to manage their accounts.
 // If the user is already logged in, it will show their profile picture & redirect them to callbackUrl immediately.
-const ButtonSignin = ({ text = "Get started", extraStyle }) => {
+const ButtonPortfolio = ({ text = "Portfolio", extraStyle }) => {
   const router = useRouter();
   const { data: session, status } = useSession();
 
@@ -56,4 +78,6 @@ const ButtonSignin = ({ text = "Get started", extraStyle }) => {
   );
 };
 
-export default ButtonSignin;
+export default ButtonPortfolio;
+
+*/
