@@ -41,16 +41,16 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="flex flex-col items-center justify-center text-center gap-20 px-40 py-24 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 text-white">
-          <p className="text-2xl font-bold"> 🚀 Skip the Dev Work. </p>
-          <h1 className="text-4xl font-extrabold">
+        <section className="flex flex-col items-center justify-center text-center gap-6 px-6 py-16 sm:px-12 sm:py-24 lg:py-10 xl:py-40 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 text-white">
+          <p className="text-lg sm:text-2xl font-bold mt-6 sm:mt-8"> 🚀 Skip the Dev Work. </p>
+          <h1 className="text-2xl sm:text-4xl font-extrabold mx-w-4xl mx-auto mt-4">
             We Build Micro SaaS Apps, One-Page Apps (OPA), Niche Apps &
             Automations — Fast
           </h1>
           
           {/* Button to trigger form popup */}
           <button
-            className="btn bg-cyan-600 text-white px-4 py-2 text-center justify-center items-center flex w-full md:w-auto text-lg md:text-xl shadow-lg hover:bg-purple-700 transition duration-300"
+            className="btn bg-cyan-600 text-white px-4 py-2 mt-4 text-center justify-center items-center flex w-full md:w-auto text-lg md:text-xl shadow-lg hover:bg-purple-700 transition duration-300"
             onClick={handleOpenForm}
           >
             What do you need built?
@@ -61,34 +61,34 @@ export default function Home() {
         </section>
 
         {/* Portfolio Carousel Section */}
-        <section id="portfolio" className="text-3xl font-extrabold text-center mb-8">
+        <section id="portfolio" className="text-3xl font-extrabold text-center py-4F sm:px-12 sm:py-20 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400">
         <PortfolioCarousel />
         </section>
 
         {/* CTA Section */}
-        <section id="CTA" className="py-20">
+        <section id="CTA" className="bg-gradient-to-r from-blue-600 via-teal-500 to-green-400">
           <CTA />
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20">
+        <section id="pricing" className="bg-base-200 py-20">
           <Pricing />
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-20">
+        <section id="faq" className="bg-base-200 py-20">
           <FAQ />
         </section>
 
         {/* Newsletter Section */}
-        <section id="newsletter" className="py-20 bg-gray-900">
+        <section id="newsletter" className="bg-base-200 py-20">
         <div className="max-w-3xl mx-auto px-4">
         <NewsletterSignup />
         </div>
         </section>
 
          {/* Footer Section */}
-         <section id="Footer" className="py-20">
+         <section id="Footer" className="bg-base-200 py-20">
           <Footer />
         </section>
 

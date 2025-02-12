@@ -108,10 +108,10 @@ const WebForm = ({ onClose }) => {
                 className="mt-1 p-2 w-full border rounded-md"
               >
                 <option value="">Select...</option>
-                <option value="$500-$1,000">$500 - $1,000</option>
-                <option value="$1,000-$2,500">$1,000 - $2,500</option>
-                <option value="$2,500-$5,000">$2,500 - $5,000</option>
-                <option value="$5,000+">$5,000+</option>
+                <option value="$500-$1,000">$750 - $1,500</option>
+                <option value="$1,000-$2,500">$1,500 - $3,500</option>
+                <option value="$2,500-$5,000">$3,500 - $7,000</option>
+                <option value="$5,000+">$7,000+</option>
               </select>
             </div>
 
@@ -126,8 +126,8 @@ const WebForm = ({ onClose }) => {
               >
                 <option value="">Select...</option>
                 <option value="ASAP">ASAP</option>
-                <option value="1-3 months">1-3 months</option>
-                <option value="3-6 months">3-6 months</option>
+                <option value="1-2 weeks">1-2 weeks</option>
+                <option value="3-6 weeks">3-6 weeks</option>
                 <option value="Flexible">Flexible</option>
               </select>
             </div>
@@ -135,21 +135,28 @@ const WebForm = ({ onClose }) => {
             <div>
               <label className="block text-sm font-medium text-gray-700">Project Description</label>
               <textarea
-                name="description"
-                value={formData.description}
-                onChange={handleChange}
-                rows="4"
-                required
-                className="mt-1 p-2 w-full border rounded-md"
-                placeholder="Tell us about your project..."
-              ></textarea>
+              name="description"
+              value={formData.description}
+              onChange={(e) => {
+              if (e.target.value.length <= 400) {
+              handleChange(e); // Only update state if within limit
+              }
+              }}
+              rows="4"
+              required
+              className="mt-1 p-2 w-full border rounded-md text-black placeholder-gray-400"
+              placeholder="Tell us about your project (Max 400 characters)..."
+              />
+              <p className="text-gray-500 text-sm mt-1">
+              {formData.description.length}/400 characters
+              </p>
             </div>
 
             <button
               type="submit"
               className="btn bg-cyan-600 text-white px-4 py-2 text-center justify-center items-center flex w-full md:w-auto text-lg md:text-xl shadow-lg hover:bg-purple-700 transition duration-300"
             >
-              What do you need built?
+              Submit
             </button>
           </form>
         )}

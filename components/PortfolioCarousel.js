@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const PortfolioCarousel = () => {
   const projects = [
@@ -13,11 +14,30 @@ const PortfolioCarousel = () => {
       name: "RevOps Crew",
       image: "/images/revopscrew.png",
       link: "https://revopscrew.com",
+      status: "Coming Soon",
     },
     {
-      name: "One-Page Site",
-      image: "/images/onepage-site.png",
-      link: "https://onepagesite.com",
+      name: "Instant Domain AI",
+      image: "/images/instantdomainai.png",
+      link: "https://instantdomainai.com",
+    },
+    {
+      name: "Senja ",
+      image: "/images/senja.png",
+      link: "https://senja.com",
+      status: "Coming Soon",
+    },
+    {
+      name: "Timer.AI ",
+      image: "/images/timer.png",
+      link: "https://timer.ai",
+      status: "Coming Soon",
+    },
+    {
+      name: "Landcrafted ",
+      image: "/images/landcrafted.png",
+      link: "https://landcrafted.co",
+      status: "Coming Soon",
     },
   ];
 
@@ -43,7 +63,7 @@ const PortfolioCarousel = () => {
   }, []);
 
   return (
-    <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6">
+    <div className="bg-gray-800 text-white shadow-lg p-6">
       {/* Static Header Section */}
       <h2 className="text-3xl font-bold text-center mb-2">Our Work</h2>
       <p className="text-gray-400 text-center mb-6">
@@ -63,12 +83,18 @@ const PortfolioCarousel = () => {
             rel="noopener noreferrer"
             className="flex-shrink-0 w-80"
           >
-            <img
+            <Image
               src={project.image}
               alt={project.name}
+              width={320} // ensures responsive scaling
+              height={180} // maintains aspect ratio
               className="rounded-lg shadow-md w-80 h-48 object-cover hover:scale-105 transition-transform duration-300"
+              priority={index === 0} // prioritize loading first image
             />
             <p className="text-cyan-400 text-center mt-2">{project.name}</p>
+            {project.status && (
+              <p className="text-gray-400 text-center text-sm italic">{project.status}</p>
+            )}
           </a>
         ))}
       </div>
