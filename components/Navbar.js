@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import ButtonAccount from "./ButtonAccount";
 
 const Navbar = () => {
   const scrollToSection = (id) => {
@@ -25,6 +26,7 @@ const Navbar = () => {
           <button className="hover:text-cyan-400 transition" onClick={() => scrollToSection("contact")}>
             Contact
           </button>
+          <ButtonAccount />
         </div>
       </div>
     </nav>

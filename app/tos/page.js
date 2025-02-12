@@ -57,39 +57,38 @@ const TOS = () => {
           className="leading-relaxed whitespace-pre-wrap"
           style={{ fontFamily: "sans-serif" }}
         >
-          {`Last Updated: September 26, 2023
+          {`Terms & Services
+          
+Last Updated: July 4, 2024
 
-Welcome to ShipFast!
+Welcome to Digital Lab!
 
-These Terms of Service ("Terms") govern your use of the ShipFast website at https://shipfa.st ("Website") and the services provided by ShipFast. By using our Website and services, you agree to these Terms.
+Welcome to Digital Lab (https://www.digitallab.dev). By using our website and services, you agree to the following Terms & Services. Please read them carefully.
 
-1. Description of ShipFast
+1. Services Provided  
+Digital Lab is a software development firm that helps clients bring their app ideas to market by creating custom applications.
 
-ShipFast is a platform that offers a JavaScript code boilerplate to assist entrepreneurs in launching their startups more efficiently.
+2. Ownership of Developed Apps  
+When purchasing our services, clients gain full access to the complete app(s) developed by Digital Lab for them. Clients own the code for their specific developed app but do not have the right to resell the code.
 
-2. Ownership and Usage Rights
+3. Refund Policy  
+Clients may request a full refund within 7 days of purchase.
 
-When you purchase a package from ShipFast, you gain the right to download and use the code provided for creating applications. You own the code you create but do not have the right to resell it. We offer a full refund within 7 days of purchase, as specified in our refund policy.
+4. Data Collection  
+We collect personal information, including your name, email, and payment information. Non-personal data is collected through web cookies. For more information, please review our Privacy Policy at https://digitallab.dev/privacy-policy.
 
-3. User Data and Privacy
+5. Governing Law  
+These Terms & Services are governed by the laws of the United States of America.
 
-We collect and store user data, including name, email, and payment information, as necessary to provide our services. For details on how we handle your data, please refer to our Privacy Policy at https://shipfa.st/privacy-policy.
+6. Updates to Terms  
+We may update these Terms & Services from time to time. Users will be notified of any changes via email.
 
-4. Non-Personal Data Collection
+7. Contact Information 
+For any questions or concerns regarding these Terms & Services, please contact us at Zach@digitallab.dev.
 
-We use web cookies to collect non-personal data for the purpose of improving our services and user experience.
+By using our website and services, you acknowledge and agree to these Terms & Services.
 
-5. Governing Law
-
-These Terms are governed by the laws of France.
-
-6. Updates to the Terms
-
-We may update these Terms from time to time. Users will be notified of any changes via email.
-
-For any questions or concerns regarding these Terms of Service, please contact us at marc@shipfa.st.
-
-Thank you for using ShipFast!`}
+Thank you for choosing Digital Lab!`}
         </pre>
       </div>
     </main>

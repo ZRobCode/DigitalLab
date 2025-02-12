@@ -47,7 +47,7 @@ const PortfolioCarousel = () => {
       {/* Static Header Section */}
       <h2 className="text-3xl font-bold text-center mb-2">Our Work</h2>
       <p className="text-gray-400 text-center mb-6">
-        Explore some of the micro SaaS apps, one-pagers, and automations we're building.
+        Explore some of the micro SaaS apps, one-page apps, and automations we&apos;re building.
       </p>
 
       {/* Scrolling Portfolio Items */}

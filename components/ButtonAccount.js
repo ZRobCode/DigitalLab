@@ -42,18 +42,18 @@ const ButtonAccount = () => {
     <Popover className="relative z-10">
       {({ open }) => (
         <>
-          <Popover.Button className="btn">
+          <Popover.Button className="btn bg-purple-300">
             {session?.user?.image ? (
               <img
                 src={session?.user?.image}
                 alt={session?.user?.name || "Account"}
-                className="w-6 h-6 rounded-full shrink-0"
+                className="w-6 h-4 rounded-full shrink-0"
                 referrerPolicy="no-referrer"
                 width={24}
                 height={24}
               />
             ) : (
-              <span className="w-6 h-6 bg-base-300 flex justify-center items-center rounded-full shrink-0">
+              <span className="w-6 h-4 bg-base-300 flex justify-center items-center rounded-full shrink-0">
                 {session?.user?.name?.charAt(0) ||
                   session?.user?.email?.charAt(0)}
               </span>
