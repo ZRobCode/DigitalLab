@@ -2,17 +2,16 @@
 
 import { useState } from "react";  // Import useState for state management
 import Link from "next/link";
-import config from "@/config";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
-import WebForm from "@/components/webform";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Pricing from "@/components/Pricing";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import Footer from "@/components/Footer";
-
+import config from "@/config";
+import WebForm from "@/components/webform";
 
 
 export default function Home() {
