@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
@@ -151,7 +151,7 @@ const HeaderBlog = () => {
   return (
     <header className="bg-base-200">
       <nav className="max-w-7xl flex items-center justify-between px-8 py-3 mx-auto">
-        {/* Your logo/name on large screens */}
+        {/* Your logo/name on large screens */ /*
         <div className="flex lg:flex-1">
           <Link
             className="flex items-center gap-2 shrink-0 "
@@ -169,7 +169,7 @@ const HeaderBlog = () => {
             <span className="font-extrabold text-lg">{config.appName}</span>
           </Link>
         </div>
-        {/* Burger button to open menu on mobile */}
+        {/* Burger button to open menu on mobile */ /*
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -194,7 +194,7 @@ const HeaderBlog = () => {
           </button>
         </div>
 
-        {/* Your links on large screens */}
+        {/* Your links on large screens *//*
         <div className="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center">
           {links.map((link) => (
             <Link
@@ -210,16 +210,16 @@ const HeaderBlog = () => {
           <ButtonPopoverCategories />
         </div>
 
-        {/* CTA on large screens */}
+        {/* CTA on large screens *//*
         <div className="hidden lg:flex lg:justify-end lg:flex-1">{cta}</div>
       </nav>
 
-      {/* Mobile menu, show/hide based on menu state. */}
+      {/* Mobile menu, show/hide based on menu state. *//*
       <div className={`relative z-50 ${isOpen ? "" : "hidden"}`}>
         <div
           className={`fixed inset-y-0 right-0 z-10 w-full px-8 py-3 overflow-y-auto bg-base-200 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right transition ease-in-out duration-300`}
         >
-          {/* Your logo/name on small screens */}
+          {/* Your logo/name on small screens *//*
           <div className="flex items-center justify-between">
             <Link
               className="flex items-center gap-2 shrink-0 "
@@ -260,7 +260,7 @@ const HeaderBlog = () => {
             </button>
           </div>
 
-          {/* Your links on small screens */}
+          {/* Your links on small screens *//*
           <div className="flow-root mt-6">
             <div className="py-4">
               <div className="flex flex-col gap-y-4 items-start">
@@ -278,7 +278,7 @@ const HeaderBlog = () => {
               </div>
             </div>
             <div className="divider"></div>
-            {/* Your CTA on small screens */}
+            {/* Your CTA on small screens *//*
             <div className="flex flex-col">{cta}</div>
           </div>
         </div>
@@ -288,3 +288,5 @@ const HeaderBlog = () => {
 };
 
 export default HeaderBlog;
+
+*/
