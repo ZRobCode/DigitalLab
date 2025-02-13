@@ -20,23 +20,24 @@ const PortfolioCarousel = () => {
       name: "Instant Domain AI",
       image: "/images/instantdomainai.png",
       link: "https://instantdomainai.com",
-    },
-    {
-      name: "Senja ",
-      image: "/images/senja.png",
-      link: "https://senja.com",
       status: "Coming Soon",
     },
     {
-      name: "Timer.AI ",
-      image: "/images/timer.png",
-      link: "https://timer.ai",
+      name: "Endorso.io ",
+      image: "/images/endorso.png",
+      link: "https://endorso.io",
       status: "Coming Soon",
     },
     {
       name: "Landcrafted ",
       image: "/images/landcrafted.png",
       link: "https://landcrafted.co",
+      status: "Coming Soon",
+    },
+    {
+      name: "Timer.AI ",
+      image: "/images/timer.png",
+      link: "https://timer.ai",
       status: "Coming Soon",
     },
   ];
