@@ -5,18 +5,21 @@ const NewsletterSignup = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  // Replace with your actual Beehiiv API Key & Publication ID
+  const BEEHIIV_API_KEY = "X0V45kSNpNG635jKubweRmJOTmzHpweJy69pCBW6jLSnZsAZ4WVlTn2k6tVdAKxB"; // Add your Beehiiv API Key here
+  const PUBLICATION_ID = "5eba1156-dca8-4e51-a0ca-4bab4bfd7938"; // Add your Beehiiv Publication ID here
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Replace with your actual Beehiiv API URL
-    const BEEHIIV_API_URL = "https://api.beehiiv.com/v2/publications/YOUR_PUBLICATION_ID/subscribers";
-    
+    const BEEHIIV_API_URL = `https://api.beehiiv.com/v2/publications/${PUBLICATION_ID}/subscriptions`;
+
     try {
       const response = await fetch(BEEHIIV_API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer YOUR_BEEHIIV_API_KEY`, // Use your Beehiiv API Key
+          Authorization: `Bearer ${BEEHIIV_API_KEY}`, // Secure API Key
         },
         body: JSON.stringify({ email }),
       });
@@ -25,7 +28,8 @@ const NewsletterSignup = () => {
         setMessage("✅ Successfully subscribed!");
         setEmail(""); // Clear input field after successful signup
       } else {
-        setMessage("❌ Error subscribing. Try again.");
+        const errorData = await response.json();
+        setMessage(`❌ Error: ${errorData.message || "Subscription failed."}`);
       }
     } catch (error) {
       setMessage("❌ Network error. Please try later.");
@@ -47,7 +51,7 @@ const NewsletterSignup = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
-            className="input input-bordered w-full"
+            className="input input-bordered w-full text-black placeholder-gray-500"
           />
           <button type="submit" className="bg-cyan-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
             Subscribe
@@ -61,3 +65,4 @@ const NewsletterSignup = () => {
 };
 
 export default NewsletterSignup;
+

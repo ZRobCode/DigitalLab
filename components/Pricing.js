@@ -1,48 +1,115 @@
 
+import React from 'react';
+import { Check } from 'lucide-react';
+
 const Pricing = () => {
+  const pricingTiers = [
+    {
+      name: "Basic MVP",
+      price: "4,999",
+      timeframe: "2-4 weeks",
+      description: "Perfect for validating your idea quickly",
+      features: [
+        "Core feature implementation",
+        "User authentication",
+        "Basic admin dashboard",
+        "Mobile-responsive design",
+        "Deployment setup",
+        "2 weeks of support"
+      ]
+    },
+    {
+      name: "Custom Micro SaaS",
+      price: "8,999",
+      timeframe: "4-6 weeks",
+      description: "Full-featured SaaS application",
+      popular: true,
+      features: [
+        "All Basic MVP features",
+        "Payment integration",
+        "Advanced admin features",
+        "Email notifications",
+        "Analytics dashboard",
+        "API integration",
+        "1 month of support"
+      ]
+    },
+    {
+      name: "AI Automation / AI Agent",
+      price: "2,999",
+      timeframe: "1-2 weeks",
+      description: "Streamline your workflow with AI",
+      features: [
+        "Workflow analysis",
+        "Custom AI agent setup",
+        "Process automation",
+        "API integrations",
+        "Documentation",
+        "2 weeks of support",
+        "Performance monitoring"
+      ]
+    }
+  ];
+
   return (
-    <section className="py-16 bg-base-200 text-center">
-      <h2 className="text-cyan-700 text-4xl font-bold mb-8">Our Pricing</h2>
-      <p className="text-lg text-gray-600 mb-8">
-      We want to give you an idea of costs. And, we provide you full pricing tailored to fit your project needs.
-      </p>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 px-8 md:px-20">
-        
-        {/* Micro SaaS App Development */} 
-        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
-          <h3 className="text-cyan-700 text-2xl font-semibold mb-4">Micro SaaS App</h3>
-          <p className="text-xl font-bold text-cyan-500 mb-4">Starting at $2,500</p>
-          <p className="text-gray-700 mb-4">Basic version with essential features, scalable options available.</p>
+    <section className="py-16 bg-gradient-to-b from-base-200 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-cyan-700 mb-4">Simple, Transparent Pricing</h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+            Launch your project quickly and efficiently. Each plan includes consultation, development, and support.
+          </p>
         </div>
 
-        {/* One-Page App (OPA) */}
-        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
-          <h3 className="text-cyan-700 text-2xl font-semibold mb-4">One-Page App (OPA)</h3>
-          <p className="text-xl font-bold text-cyan-500 mb-4">Starting at $1,500</p>
-          <p className="text-gray-700 mb-4">Fast, single-purpose apps with minimal UI/UX.</p>
+        <div className="grid gap-8 md:grid-cols-3 lg:max-w-6xl lg:mx-auto">
+          {pricingTiers.map((tier) => (
+            <div 
+              key={tier.name}
+              className={`bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1
+                ${tier.popular ? 'border-2 border-cyan-500 relative' : ''}
+              `}
+            >
+              {tier.popular && (
+                <span className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  Most Popular
+                </span>
+              )}
+              
+              <h3 className="text-2xl font-semibold text-cyan-700 mb-2">{tier.name}</h3>
+              <div className="mb-4">
+                <span className="text-4xl font-bold text-gray-900">${tier.price}</span>
+                <span className="text-gray-500 ml-2">starting at</span>
+              </div>
+              <p className="text-cyan-600 font-medium mb-6">{tier.timeframe}</p>
+              <p className="text-gray-600 mb-6">{tier.description}</p>
+              
+              <ul className="space-y-4 mb-8">
+                {tier.features.map((feature) => (
+                  <li key={feature} className="flex items-start">
+                    <Check className="h-5 w-5 text-cyan-500 flex-shrink-0 mt-1" />
+                    <span className="ml-3 text-gray-600">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <button className="w-full py-3 px-6 rounded-lg bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition duration-300">
+                Schedule Consultation
+              </button>
+            </div>
+          ))}
         </div>
 
-        {/* Niche App Development */}
-        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
-          <h3 className="text-cyan-700 text-2xl font-semibold mb-4">Niche App Development</h3>
-          <p className="text-xl font-bold text-cyan-500 mb-4">Starting at $4,500</p>
-          <p className="text-gray-700 mb-4">More complex, tailored apps with specific market fit.</p>
+        <div className="text-center mt-12">
+          <p className="text-gray-600">
+            Need a custom solution? <button className="text-cyan-600 font-medium hover:text-cyan-700">Let&apos;s talk</button>
+          </p>
         </div>
-
-        {/* Automation Workflow Setup */}
-        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
-          <h3 className="text-cyan-700 text-2xl font-semibold mb-4">Automation Workflow</h3>
-          <p className="text-xl font-bold text-cyan-500 mb-4">Starting at $750</p>
-          <p className="text-gray-700 mb-4">Pre-built or custom automations for business processes.</p>
-        </div>
-        
       </div>
     </section>
   );
 };
 
 export default Pricing;
-
 
 /*
 import config from "@/config";

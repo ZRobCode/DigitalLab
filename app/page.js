@@ -12,6 +12,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 import Footer from "@/components/Footer";
 import config from "@/config";
 import WebForm from "@/components/webform";
+import Process from "@/components/Process";
 
 
 export default function Home() {
@@ -44,9 +45,12 @@ export default function Home() {
         <section className="flex flex-col items-center justify-center text-center gap-6 px-6 py-16 sm:px-12 sm:py-24 lg:py-10 xl:py-40 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 text-white">
           <p className="text-lg sm:text-2xl font-bold mt-6 sm:mt-8"> 🚀 Skip the Dev Work. </p>
           <h1 className="text-2xl sm:text-4xl font-extrabold mx-w-4xl mx-auto mt-4">
-            We Build Micro SaaS Apps, One-Page Apps (OPA), Niche Apps &
-            Automations — Fast
+            We Build AI-Powered MVPs, Micro SaaS Apps, 
+            & Business Automations — FAST!
           </h1>
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto mt-4 text-white/90">
+        Transform your ideas into reality with AI-enhanced development and automation solutions
+          </p>
           
           {/* Button to trigger form popup */}
           <button
@@ -68,6 +72,11 @@ export default function Home() {
         {/* CTA Section */}
         <section id="CTA" className="bg-gradient-to-r from-blue-600 via-teal-500 to-green-400">
           <CTA />
+        </section>
+
+        {/* Process Section */}
+        <section id="process" className="bg-base-200 py-20">
+          <Process />
         </section>
 
         {/* Pricing Section */}
