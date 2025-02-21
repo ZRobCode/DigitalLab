@@ -8,11 +8,12 @@ import PortfolioCarousel from "@/components/PortfolioCarousel";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Pricing from "@/components/Pricing";
-import NewsletterSignup from "@/components/NewsletterSignup";
-import Footer from "@/components/Footer";
+import NewsletterCombo from "@/components/NewsletterCombo";
 import config from "@/config";
 import WebForm from "@/components/webform";
+import GPTSearch from "@/components/GPTSearch";
 import Process from "@/components/Process";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -42,8 +43,8 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="flex flex-col items-center justify-center text-center gap-6 px-6 py-16 sm:px-12 sm:py-24 lg:py-10 xl:py-40 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 text-white">
-          <p className="text-lg sm:text-2xl font-bold mt-6 sm:mt-8"> 🚀 Skip the Dev Work. </p>
+        <section className="flex flex-col items-center justify-center text-center gap-6 px-6 py-14 sm:px-12 sm:py-24 lg:py-10 xl:py-40 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 text-white">
+          <p className="text-lg sm:text-2xl font-bold mt-4 sm:mt-8"> 🚀 Skip the Dev Work. </p>
           <h1 className="text-2xl sm:text-4xl font-extrabold mx-w-4xl mx-auto mt-4">
             We Build AI-Powered MVPs, Micro SaaS Apps, 
             & Business Automations — FAST!
@@ -65,8 +66,13 @@ export default function Home() {
         </section>
 
         {/* Portfolio Carousel Section */}
-        <section id="portfolio" className="text-3xl font-extrabold text-center py-4F sm:px-12 sm:py-20 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400">
+        <section id="portfolio" className="text-3xl font-extrabold text-center py-2F sm:px-12 sm:py-20 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400">
         <PortfolioCarousel />
+        </section>
+
+        {/* GPT Search Section */}
+        <section id="gpt-search" className="bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 py-2">
+          <GPTSearch />
         </section>
 
         {/* CTA Section */}
@@ -92,7 +98,7 @@ export default function Home() {
         {/* Newsletter Section */}
         <section id="newsletter" className="bg-base-200 py-20">
         <div className="max-w-3xl mx-auto px-4">
-        <NewsletterSignup />
+        <NewsletterCombo  />
         </div>
         </section>
 

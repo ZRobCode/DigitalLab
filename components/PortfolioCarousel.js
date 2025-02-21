@@ -6,9 +6,33 @@ import Image from "next/image";
 const PortfolioCarousel = () => {
   const projects = [
     {
+      name: "Instant Domain AI",
+      image: "/images/instantdomainai.png",
+      link: "https://instantdomainai.com",
+      status: "Coming Soon",
+    },
+    {
       name: "FeatureLenz",
       image: "/images/featurelenz.png", 
       link: "https://featurelenz.com",
+    },
+    {
+      name: "Endorso.io ",
+      image: "/images/endorso.png",
+      link: "https://endorso.io",
+      status: "Coming Soon",
+    },
+    {
+      name: "Client Support Chatbot",
+      image: "/images/timer.png",
+      link: "https://www.SupportChat.bot",
+      status: "Coming Soon",
+    },
+    {
+      name: "BeaverQR",
+      image: "/images/BeaverQR.png",
+      link: "https://www.beaverqr.com",
+      status: "Coming Soon",
     },
     {
       name: "RevOps Crew",
@@ -17,15 +41,9 @@ const PortfolioCarousel = () => {
       status: "Coming Soon",
     },
     {
-      name: "Instant Domain AI",
-      image: "/images/instantdomainai.png",
-      link: "https://instantdomainai.com",
-      status: "Coming Soon",
-    },
-    {
-      name: "Endorso.io ",
-      image: "/images/endorso.png",
-      link: "https://endorso.io",
+      name: "CellSpark ",
+      image: "/images/CelLSpark.png",
+      link: "https://www.cellspark.ai",
       status: "Coming Soon",
     },
     {
@@ -35,9 +53,9 @@ const PortfolioCarousel = () => {
       status: "Coming Soon",
     },
     {
-      name: "Timer.AI ",
-      image: "/images/timer.png",
-      link: "https://timer.ai",
+      name: "SoilHealth.io ",
+      image: "/images/soilhealth.png",
+      link: "https://www.soilhealth.io",
       status: "Coming Soon",
     },
   ];
@@ -68,7 +86,7 @@ const PortfolioCarousel = () => {
       {/* Static Header Section */}
       <h2 className="text-3xl font-bold text-center mb-2">Our Work</h2>
       <p className="text-gray-400 text-center mb-6">
-        Explore some of the micro SaaS apps, one-page apps, and automations we&apos;re building.
+        Explore some of the micro SaaS apps, MVPs, and AI automations we&apos;re building.
       </p>
 
       {/* Scrolling Portfolio Items */}

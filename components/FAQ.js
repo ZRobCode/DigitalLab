@@ -15,7 +15,7 @@ const faqList = [
     question: "How long does it take to deliver a project?",
     answer: (
       <p className="text-gray-300">
-        Depending on the complexity, micro SaaS apps take 1-4 weeks, while one-page websites and automation workflows can be delivered in as little as 48 hours.
+        Depending on complexity, Basic MVPs take 2-4 weeks, Custom Micro SaaS takes 4-6 weeks, while AI Automation/AI Agents are typically delivered in 1-2 weeks.
       </p>
     ),
   },
@@ -29,11 +29,15 @@ const faqList = [
   },
   {
     question: "Is there post-launch support?",
-    answer: (
-      <div className="space-y-2 leading-relaxed text-gray-300">
-        Yes! We offer optional support packages to ensure your app or website runs smoothly after launch.
-      </div>
-    ),
+answer: (
+  <div className="space-y-2 leading-relaxed text-gray-300">
+    Yes! We offer optional support plans, starting at <strong>$500/month</strong>, covering bug fixes, UI improvements, and ongoing feature enhancements.{" "}
+    <a href="#maintenance" className="text-cyan-400 hover:underline">
+      Learn more in our Maintenance Plans section.
+    </a>
+  </div>
+),
+
   },
   {
     question: "How much does a project cost?",

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
 
@@ -6,37 +5,39 @@ const Pricing = () => {
   const pricingTiers = [
     {
       name: "Basic MVP",
-      price: "4,999",
+      price: "4,000",
       timeframe: "2-4 weeks",
       description: "Perfect for validating your idea quickly",
       features: [
-        "Core feature implementation",
+        "One Core feature implementation",
         "User authentication",
-        "Basic admin dashboard",
+        "Basic admin controls",
+        "Modern UI/UX design",
         "Mobile-responsive design",
-        "Deployment setup",
-        "2 weeks of support"
+        "Cloud Deployment setup",
+        "2 weeks of technical support"
       ]
     },
     {
       name: "Custom Micro SaaS",
-      price: "8,999",
+      price: "7,500",
       timeframe: "4-6 weeks",
       description: "Full-featured SaaS application",
       popular: true,
       features: [
         "All Basic MVP features",
-        "Payment integration",
+        "Additional features",
+        "Stripe Payment integration",
         "Advanced admin features",
         "Email notifications",
         "Analytics dashboard",
-        "API integration",
+        "API integration & documentation",
         "1 month of support"
       ]
     },
     {
       name: "AI Automation / AI Agent",
-      price: "2,999",
+      price: "2,000",
       timeframe: "1-2 weeks",
       description: "Streamline your workflow with AI",
       features: [
@@ -45,19 +46,46 @@ const Pricing = () => {
         "Process automation",
         "API integrations",
         "Documentation",
-        "2 weeks of support",
+        "1 week of support",
         "Performance monitoring"
       ]
     }
   ];
 
+  const maintenanceTiers = [
+    {
+      name: "Basic",
+      price: "500",
+      features: ["Bug fixes & security updates", "Minor UI improvements", "Performance monitoring"]
+    },
+    {
+      name: "Growth",
+      price: "1,500",
+      features: ["Everything in Basic", "Monthly feature enhancements", "AI model tuning", "Proactive optimizations"]
+    },
+    {
+      name: "Scale",
+      price: "3,000",
+      features: [
+        "Everything in Growth",
+        "Custom feature requests",
+        "Ongoing integrations",
+        "Automation scaling",
+        "High-priority support"
+      ]
+    }
+  ];
+
   return (
-    <section className="py-16 bg-gradient-to-b from-base-200 to-white">
+    <section className="py-10 bg-gradient-to-b from-base-200 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-cyan-700 mb-4">Simple, Transparent Pricing</h2>
-          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Launch your project quickly and efficiently. Each plan includes consultation, development, and support.
+          <p className="text-lg text-gray-600 mb-4 max-w-3xl mx-auto">
+            Launch your project quickly and efficiently. Choose a package that fits your needs.
+          </p>
+          <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
+            All packages include: Code repository, Deployment setup, Basic SEO, Performance optimization
           </p>
         </div>
 
@@ -93,16 +121,31 @@ const Pricing = () => {
               </ul>
 
               <button className="w-full py-3 px-6 rounded-lg bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition duration-300">
-                Schedule Consultation
+              Tell Us About Your Project
               </button>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-gray-600">
-            Need a custom solution? <button className="text-cyan-600 font-medium hover:text-cyan-700">Let&apos;s talk</button>
-          </p>
+        {/* Ongoing Maintenance Add-on Section */}
+        <div id="maintenance" className="mt-16 bg-gray-100 p-8 rounded-xl shadow-lg">
+          <h3 className="text-2xl font-bold text-cyan-700 text-center mb-6">Optional On-Going Maintenance & Support</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {maintenanceTiers.map((tier) => (
+              <div key={tier.name} className="bg-white p-6 rounded-lg shadow-md text-center">
+                <h4 className="text-xl font-semibold text-cyan-700 mb-2">{tier.name}</h4>
+                <p className="text-3xl font-bold text-gray-900">${tier.price}<span className="text-lg text-gray-500">/month</span></p>
+                <ul className="text-gray-600 mt-4 space-y-2">
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="flex items-center justify-center">
+                      <Check className="h-5 w-5 text-cyan-500 flex-shrink-0" />
+                      <span className="ml-2">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -110,6 +153,7 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
 
 /*
 import config from "@/config";

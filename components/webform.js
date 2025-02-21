@@ -23,7 +23,7 @@ const WebForm = ({ onClose }) => {
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/submit-form", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -92,9 +92,9 @@ const WebForm = ({ onClose }) => {
               >
                 <option value="">Select...</option>
                 <option value="Micro SaaS">Micro SaaS App</option>
-                <option value="One-Page App">One-Page App (OPA)</option>
-                <option value="Niche App">Niche App</option>
-                <option value="Automation Workflow">Automation Workflow</option>
+                <option value="Niche MVP">Niche Minimial Viable Product (MVP)</option>
+                <option value="AI Agent">AI Agent</option>
+                <option value="Business Automation Workflow">Business Automation Workflow</option>
               </select>
             </div>
 
@@ -108,10 +108,10 @@ const WebForm = ({ onClose }) => {
                 className="mt-1 p-2 w-full border rounded-md"
               >
                 <option value="">Select...</option>
-                <option value="$500-$1,000">$750 - $1,500</option>
-                <option value="$1,000-$2,500">$1,500 - $3,500</option>
-                <option value="$2,500-$5,000">$3,500 - $7,000</option>
-                <option value="$5,000+">$7,000+</option>
+                <option value="$500-$1,000">$850 - $2,500</option>
+                <option value="$1,000-$2,500">$2,500 - $5,000</option>
+                <option value="$2,500-$5,000">$5,000 - $8,500</option>
+                <option value="$5,000+">$8,500+</option>
               </select>
             </div>
 
@@ -135,20 +135,20 @@ const WebForm = ({ onClose }) => {
             <div>
               <label className="block text-sm font-medium text-gray-700">Project Description</label>
               <textarea
-              name="description"
-              value={formData.description}
-              onChange={(e) => {
-              if (e.target.value.length <= 400) {
-              handleChange(e); // Only update state if within limit
-              }
-              }}
-              rows="4"
-              required
-              className="mt-1 p-2 w-full border rounded-md text-black placeholder-gray-400"
-              placeholder="Tell us about your project (Max 400 characters)..."
+                name="description"
+                value={formData.description}
+                onChange={(e) => {
+                  if (e.target.value.length <= 400) {
+                    handleChange(e); // Only update state if within limit
+                  }
+                }}
+                rows="4"
+                required
+                className="mt-1 p-2 w-full border rounded-md text-black placeholder-gray-400"
+                placeholder="Tell us about your project (Max 400 characters)..."
               />
               <p className="text-gray-500 text-sm mt-1">
-              {formData.description.length}/400 characters
+                {formData.description.length}/400 characters
               </p>
             </div>
 
@@ -166,3 +166,4 @@ const WebForm = ({ onClose }) => {
 };
 
 export default WebForm;
+

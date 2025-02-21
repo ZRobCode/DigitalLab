@@ -74,7 +74,7 @@ const CTA = () => {
           </ul>
 
           <button
-            className="btn bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 text-center justify-center items-center flex w-full md:w-auto text-lg md:text-xl shadow-lg transition duration-300 rounded-lg"
+            className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 flex justify-center items-center text-lg md:text-xl hover:bg-purple-700 transition duration-300 rounded-lg"
             onClick={handleOpenForm}
           >
             Get Started!
