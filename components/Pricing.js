@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Check } from 'lucide-react';
+import WebForm from './webform'; // Import the WebForm Component
 
 const Pricing = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const openForm = () => setIsFormOpen(true);
+  const closeForm = () => setIsFormOpen(false);
+
   const pricingTiers = [
     {
       name: "Basic MVP",
@@ -52,30 +58,6 @@ const Pricing = () => {
     }
   ];
 
-  const maintenanceTiers = [
-    {
-      name: "Basic",
-      price: "500",
-      features: ["Bug fixes & security updates", "Minor UI improvements", "Performance monitoring"]
-    },
-    {
-      name: "Growth",
-      price: "1,500",
-      features: ["Everything in Basic", "Monthly feature enhancements", "AI model tuning", "Proactive optimizations"]
-    },
-    {
-      name: "Scale",
-      price: "3,000",
-      features: [
-        "Everything in Growth",
-        "Custom feature requests",
-        "Ongoing integrations",
-        "Automation scaling",
-        "High-priority support"
-      ]
-    }
-  ];
-
   return (
     <section className="py-10 bg-gradient-to-b from-base-200 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,34 +102,18 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <button className="w-full py-3 px-6 rounded-lg bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition duration-300">
-              Tell Us About Your Project
+              <button
+                className="w-full py-3 px-6 rounded-lg bg-cyan-600 text-white font-medium hover:bg-purple-700 transition duration-300"
+                onClick={openForm} // Open the WebForm on Click
+              >
+                Tell Us About Your Project
               </button>
             </div>
           ))}
         </div>
-
-        {/* Ongoing Maintenance Add-on Section */}
-        <div id="maintenance" className="mt-16 bg-gray-100 p-8 rounded-xl shadow-lg">
-          <h3 className="text-2xl font-bold text-cyan-700 text-center mb-6">Optional On-Going Maintenance & Support</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {maintenanceTiers.map((tier) => (
-              <div key={tier.name} className="bg-white p-6 rounded-lg shadow-md text-center">
-                <h4 className="text-xl font-semibold text-cyan-700 mb-2">{tier.name}</h4>
-                <p className="text-3xl font-bold text-gray-900">${tier.price}<span className="text-lg text-gray-500">/month</span></p>
-                <ul className="text-gray-600 mt-4 space-y-2">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-center justify-center">
-                      <Check className="h-5 w-5 text-cyan-500 flex-shrink-0" />
-                      <span className="ml-2">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
+
+      {isFormOpen && <WebForm onClose={closeForm} />}
     </section>
   );
 };

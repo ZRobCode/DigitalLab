@@ -65,7 +65,7 @@ const WebForm = ({ onClose }) => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="mt-1 p-2 w-full border rounded-md"
+                className="text-black mt-1 p-2 w-full border rounded-md"
               />
             </div>
 
@@ -77,7 +77,7 @@ const WebForm = ({ onClose }) => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="mt-1 p-2 w-full border rounded-md"
+                className="text-black mt-1 p-2 w-full border rounded-md"
               />
             </div>
 
@@ -88,7 +88,7 @@ const WebForm = ({ onClose }) => {
                 value={formData.projectType}
                 onChange={handleChange}
                 required
-                className="mt-1 p-2 w-full border rounded-md"
+                className="text-black mt-1 p-2 w-full border rounded-md"
               >
                 <option value="">Select...</option>
                 <option value="Micro SaaS">Micro SaaS App</option>
@@ -105,7 +105,7 @@ const WebForm = ({ onClose }) => {
                 value={formData.budget}
                 onChange={handleChange}
                 required
-                className="mt-1 p-2 w-full border rounded-md"
+                className="text-black mt-1 p-2 w-full border rounded-md"
               >
                 <option value="">Select...</option>
                 <option value="$500-$1,000">$850 - $2,500</option>
@@ -122,7 +122,7 @@ const WebForm = ({ onClose }) => {
                 value={formData.timeline}
                 onChange={handleChange}
                 required
-                className="mt-1 p-2 w-full border rounded-md"
+                className="text-black mt-1 p-2 w-full border rounded-md"
               >
                 <option value="">Select...</option>
                 <option value="ASAP">ASAP</option>

@@ -101,7 +101,7 @@ const Item = ({ item }) => {
 
 const FAQ = () => {
   return (
-    <section className="bg-base-200 text-gray-100" id="faq">
+    <section className="bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 bg-base-200 text-gray-100" id="faq">
       <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row bg-gray-800 p-8 rounded-lg shadow-lg">
         <div className="flex flex-col text-left basis-1/2">
           {/* Updated the FAQ label color */}

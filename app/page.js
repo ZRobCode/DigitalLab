@@ -43,7 +43,7 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="flex flex-col items-center justify-center text-center gap-6 px-6 py-14 sm:px-12 sm:py-24 lg:py-10 xl:py-40 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 text-white">
+        <section className="flex flex-col items-center justify-center text-center gap-6 px-6 py-14 sm:px-12 sm:py-24 lg:py-10 xl:py-20 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 text-white">
           <p className="text-lg sm:text-2xl font-bold mt-4 sm:mt-8"> 🚀 Skip the Dev Work. </p>
           <h1 className="text-2xl sm:text-4xl font-extrabold mx-w-4xl mx-auto mt-4">
             We Build AI-Powered MVPs, Micro SaaS Apps, 
@@ -66,7 +66,7 @@ export default function Home() {
         </section>
 
         {/* Portfolio Carousel Section */}
-        <section id="portfolio" className="text-3xl font-extrabold text-center py-2F sm:px-12 sm:py-20 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400">
+        <section id="portfolio" className="text-3xl font-extrabold text-center py-4 sm:px-12 sm:py-10 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400">
         <PortfolioCarousel />
         </section>
 
@@ -86,17 +86,17 @@ export default function Home() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="bg-base-200 py-20">
+        <section id="pricing" className="bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 bg-base-200 py-20">
           <Pricing />
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="bg-base-200 py-20">
+        <section id="faq" className="bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 py-20">
           <FAQ />
         </section>
 
         {/* Newsletter Section */}
-        <section id="newsletter" className="bg-base-200 py-20">
+        <section id="newsletter" className="bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 bg-base-200 py-20">
         <div className="max-w-3xl mx-auto px-4">
         <NewsletterCombo  />
         </div>

@@ -5,7 +5,7 @@ const config = {
   appName: "Digital Lab",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "Software Development - Create custom Micro SaaS, One-Page Apps & Niche Apps",
+    "Software Development - Create custom Micro SaaS Apps, MVP Apps, & AI Agents/AI Automations",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "www.digitallab.dev",
   crisp: {

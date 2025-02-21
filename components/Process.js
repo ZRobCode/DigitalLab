@@ -43,12 +43,12 @@ const Process = () => {
     {
       icon: FileText,
       title: "Submit Form",
-      description: "Fill out our quick project inquiry form with your requirements. Takes less than 3 minutes to complete.",
+      description: "Fill out our quick project inquiry form with your requirements. Takes less than 2 minutes to complete.",
     },
     {
       icon: Mail,
-      title: "Instant Setup",
-      description: "Receive immediate access to your project dashboard via email, including a Trello board for progress tracking and an optional Calendly link to discuss your project.",
+      title: "Email and/or Video Chat",
+      description: "After submitting the form, you'll receive an email with an optional Calendly link for a video chat to discuss your project needs. Once details are confirmed, you'll get access to your Trello project dashboard for progress tracking, and a Stripe invoice for secure payment.",
     },
     {
       icon: CreditCard,
@@ -67,9 +67,9 @@ const Process = () => {
     },
     {
       icon: HeartHandshake,
-      title: "Ongoing Support",
-      description: "Enjoy dedicated post-launch support and maintenance to keep your solution running optimally.",
-    }
+      title: "Support & Maintenance",
+      description: "Receive post-launch support to ensure everything runs smoothly: MVPs include 2 weeks, Micro SaaS 1 month, and AI Automation/Agents 1 week of technical support. Need more? Optional support packages are available for ongoing maintenance and enhancements.",
+    },    
   ];
 
   return (
