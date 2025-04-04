@@ -42,7 +42,7 @@ const Pricing = () => {
       ]
     },
     {
-      name: "AI Automation / AI Agent",
+      name: "AI Workflow Automation / Custom AI Agent",
       price: "2,000",
       timeframe: "1-2 weeks",
       description: "Streamline your workflow with AI",

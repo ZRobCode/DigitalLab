@@ -28,6 +28,14 @@ const faqList = [
     ),
   },
   {
+    question: "Do I (client) own the code?",
+    answer: (
+      <div className="space-y-2 leading-relaxed text-gray-300">
+        Yes, 100%. All code we build for you is yours. You retain full ownership and can modify or scale it however you wish — no vendor lock-in.
+      </div>
+    ),
+  },
+  {
     question: "Is there post-launch support?",
 answer: (
   <div className="space-y-2 leading-relaxed text-gray-300">

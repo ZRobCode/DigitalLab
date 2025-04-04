@@ -1,6 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const RECAPTCHA_SITE_KEY = "your_site_key_here"; // ⬅️ Replace with your actual reCAPTCHA site key
 
 const WebForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -13,6 +16,7 @@ const WebForm = ({ onClose }) => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const recaptchaRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,13 +26,21 @@ const WebForm = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const token = await recaptchaRef.current.executeAsync();
+    recaptchaRef.current.reset();
+
+    if (!token) {
+      alert("Please verify you're a human.");
+      return;
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, token }),
       });
 
       if (res.ok) {
@@ -57,6 +69,7 @@ const WebForm = ({ onClose }) => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Name */}
             <div>
               <label className="block text-sm font-medium text-gray-700">Name</label>
               <input
@@ -69,6 +82,7 @@ const WebForm = ({ onClose }) => {
               />
             </div>
 
+            {/* Email */}
             <div>
               <label className="block text-sm font-medium text-gray-700">Email</label>
               <input
@@ -81,6 +95,7 @@ const WebForm = ({ onClose }) => {
               />
             </div>
 
+            {/* Project Type */}
             <div>
               <label className="block text-sm font-medium text-gray-700">Type of App/Automation</label>
               <select
@@ -98,6 +113,7 @@ const WebForm = ({ onClose }) => {
               </select>
             </div>
 
+            {/* Budget */}
             <div>
               <label className="block text-sm font-medium text-gray-700">Budget</label>
               <select
@@ -115,6 +131,7 @@ const WebForm = ({ onClose }) => {
               </select>
             </div>
 
+            {/* Timeline */}
             <div>
               <label className="block text-sm font-medium text-gray-700">Timeline</label>
               <select
@@ -132,6 +149,7 @@ const WebForm = ({ onClose }) => {
               </select>
             </div>
 
+            {/* Description */}
             <div>
               <label className="block text-sm font-medium text-gray-700">Project Description</label>
               <textarea
@@ -139,7 +157,7 @@ const WebForm = ({ onClose }) => {
                 value={formData.description}
                 onChange={(e) => {
                   if (e.target.value.length <= 400) {
-                    handleChange(e); // Only update state if within limit
+                    handleChange(e);
                   }
                 }}
                 rows="4"
@@ -152,6 +170,14 @@ const WebForm = ({ onClose }) => {
               </p>
             </div>
 
+            {/* reCAPTCHA (invisible) */}
+            <ReCAPTCHA
+              sitekey={RECAPTCHA_SITE_KEY}
+              size="invisible"
+              ref={recaptchaRef}
+            />
+
+            {/* Submit */}
             <button
               type="submit"
               className="btn bg-cyan-600 text-white px-4 py-2 text-center justify-center items-center flex w-full md:w-auto text-lg md:text-xl shadow-lg hover:bg-purple-700 transition duration-300"
@@ -166,4 +192,3 @@ const WebForm = ({ onClose }) => {
 };
 
 export default WebForm;
-

@@ -39,15 +39,16 @@ export default function Home() {
           name="keywords"
           content="micro saas, one-page apps, niche Apps, automation workflows, digital lab, digital lab dev, digital lab development"
         />
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       </Head>
 
       <main>
         {/* Hero Section */}
         <section className="flex flex-col items-center justify-center text-center gap-6 px-6 py-14 sm:px-12 sm:py-24 lg:py-10 xl:py-20 bg-gradient-to-r from-blue-600 via-teal-500 to-green-400 text-white">
-          <p className="text-lg sm:text-2xl font-bold mt-4 sm:mt-8"> 🚀 Skip the Dev Work. </p>
+          <p className="text-lg sm:text-2xl font-bold mt-4 sm:mt-8 md:mt-12 lg:mt-16 pt-0 md:pt-4 lg:pt-8"> 🚀 Skip the Dev Work. </p>
           <h1 className="text-2xl sm:text-4xl font-extrabold mx-w-4xl mx-auto mt-4">
-            We Build AI-Powered MVPs, Micro SaaS Apps, 
-            & Business Automations — FAST!
+            We Build MVPs, Custom AI Agents, Micro SaaS Apps, 
+            & Business Workflow Automations — FAST!
           </h1>
           <p className="text-lg sm:text-xl max-w-2xl mx-auto mt-4 text-white/90">
         Transform your ideas into reality with AI-enhanced development and automation solutions
@@ -103,7 +104,7 @@ export default function Home() {
         </section>
 
          {/* Footer Section */}
-         <section id="Footer" className="bg-base-200 py-20">
+         <section id="Footer" className="bg-gradient-to-r from-blue-600 via-teal-500 to-green-400  bg-base-200 pt-10">
           <Footer />
         </section>
 

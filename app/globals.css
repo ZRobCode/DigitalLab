@@ -22,6 +22,10 @@ progress::-webkit-progress-value {
     @apply bg-cyan-600 text-white px-6 py-3 font-semibold rounded-lg shadow-md hover:bg-purple-700 transition;
   }
 
+  .btn-accent {
+    @apply bg-amber-500 text-white px-6 py-3 font-semibold rounded-lg shadow-md hover:bg-amber-600 transition;
+  }
+  
   .btn-secondary {
     @apply bg-indigo-600 text-white px-6 py-3 font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition;
   }

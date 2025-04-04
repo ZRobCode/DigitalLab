@@ -42,7 +42,7 @@ const PortfolioCarousel = () => {
     },
     {
       name: "CellSpark ",
-      image: "/images/CelLSpark.png",
+      image: "/images/celLspark.png",
       link: "https://www.cellspark.ai",
       status: "Coming Soon",
     },
@@ -54,7 +54,7 @@ const PortfolioCarousel = () => {
     },
     {
       name: "SoilHealth.io ",
-      image: "/images/soilhealth.png",
+      image: "/images/SoilHealth.png",
       link: "https://www.soilhealth.io",
       status: "Coming Soon",
     },
